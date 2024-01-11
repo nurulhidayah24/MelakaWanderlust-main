@@ -15,6 +15,7 @@ class Place {
   final String website;
   final double latitude;
   final double longitude;
+  final String rating;
 
   Place({
     required this.firestoreId,
@@ -29,6 +30,7 @@ class Place {
     required this.website,
     required this.latitude,
     required this.longitude,
+    required this.rating,
   });
 
 
@@ -62,6 +64,7 @@ class Place {
       website: (data['website'] as String?) ?? '',
       latitude: (data['latitude'] as num?)?.toDouble() ?? 0.0,
       longitude: (data['longitude'] as num?)?.toDouble() ?? 0.0,
+      rating: (data['rating'] as String?) ?? '0.0',
     );
   }
 
@@ -94,6 +97,7 @@ class Beach extends Place {
     required String website,
     required double latitude,
     required double longitude,
+    required String rating,
   }) : super(
     firestoreId: firestoreId,
     name: name,
@@ -107,6 +111,7 @@ class Beach extends Place {
     website: website,
     latitude: latitude,
     longitude: longitude,
+    rating: rating,
   );
 
   factory Beach.fromFirestore(QueryDocumentSnapshot<Map<String, dynamic>> document) {
@@ -123,6 +128,7 @@ class Beach extends Place {
       website: (data['website'] as String?) ?? '',
       latitude: (data['latitude'] as num?)?.toDouble() ?? 0.0,
       longitude: (data['longitude'] as num?)?.toDouble() ?? 0.0,
+      rating: (data['rating'] as String?) ?? '0.0', // Changed to String
     );
   }
 }
@@ -140,6 +146,7 @@ class Historical extends Place {
     required String website,
     required double latitude,
     required double longitude,
+    required String rating,
   }) : super(
     firestoreId: firestoreId,
     name: name,
@@ -153,6 +160,7 @@ class Historical extends Place {
     website: website,
     latitude: latitude,
     longitude: longitude,
+    rating: rating,
   );
 
   factory Historical.fromFirestore(QueryDocumentSnapshot<Map<String, dynamic>> document) {
@@ -169,6 +177,7 @@ class Historical extends Place {
       website: (data['website'] as String?) ?? '',
       latitude: (data['latitude'] as num?)?.toDouble() ?? 0.0,
       longitude: (data['longitude'] as num?)?.toDouble() ?? 0.0,
+      rating: (data['rating'] as String?) ?? '0.0', // Changed to String
     );
   }
 }
@@ -186,6 +195,7 @@ class Attraction extends Place {
     required String website,
     required double latitude,
     required double longitude,
+    required String rating,
   }) : super(
     firestoreId: firestoreId,
     name: name,
@@ -199,6 +209,7 @@ class Attraction extends Place {
     website: website,
     latitude: latitude,
     longitude: longitude,
+    rating: rating,
   );
 
   factory Attraction.fromFirestore(QueryDocumentSnapshot<Map<String, dynamic>> document) {
@@ -215,6 +226,7 @@ class Attraction extends Place {
       website: (data['website'] as String?) ?? '',
       latitude: (data['latitude'] as num?)?.toDouble() ?? 0.0,
       longitude: (data['longitude'] as num?)?.toDouble() ?? 0.0,
+      rating: (data['rating'] as String?) ?? '0.0', // Changed to String
     );
   }
 }
@@ -232,6 +244,7 @@ class Restaurant extends Place {
     required String website,
     required double latitude,
     required double longitude,
+    required String rating,
   }) : super(
     firestoreId: firestoreId,
     name: name,
@@ -245,6 +258,8 @@ class Restaurant extends Place {
     website: website,
     latitude: latitude,
     longitude: longitude,
+    rating: rating,
+
   );
 
   factory Restaurant.fromFirestore(QueryDocumentSnapshot<Map<String, dynamic>> document) {
@@ -261,6 +276,7 @@ class Restaurant extends Place {
       website: (data['website'] as String?) ?? '',
       latitude: (data['latitude'] as num?)?.toDouble() ?? 0.0,
       longitude: (data['longitude'] as num?)?.toDouble() ?? 0.0,
+      rating: (data['rating'] as String?) ?? '0.0', // Changed to String
     );
   }
 }

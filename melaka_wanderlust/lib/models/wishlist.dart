@@ -337,6 +337,7 @@ class Wishlist extends ChangeNotifier {
         website: place.website,
         latitude: place.latitude,
         longitude: place.longitude,
+        rating: place.rating,
       );
     })
         .toList();
@@ -363,6 +364,7 @@ class Wishlist extends ChangeNotifier {
         website: place.website,
         latitude: place.latitude,
         longitude: place.longitude,
+        rating: place.rating,
       );
     })
         .toList();
@@ -389,6 +391,7 @@ class Wishlist extends ChangeNotifier {
         website: place.website,
         latitude: place.latitude,
         longitude: place.longitude,
+        rating: place.rating,
       );
     })
         .toList();
@@ -415,6 +418,7 @@ class Wishlist extends ChangeNotifier {
         website: place.website,
         latitude: place.latitude,
         longitude: place.longitude,
+        rating: place.rating,
       );
     })
         .toList();
