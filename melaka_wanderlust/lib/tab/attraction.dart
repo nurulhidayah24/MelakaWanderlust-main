@@ -208,7 +208,7 @@ class AttractionTab extends StatelessWidget {
                                 Attraction attraction = attractionList[index];
                                 // Determine whether the beach is a favorite or not
                                 bool isFavorite = value.isPlaceInWishlist(attraction);
-                                return PlaceTile(place: attraction, isFavorite: isFavorite);
+                                return PlaceTile(place: attraction, isFavorite: isFavorite, );
 
                               },
                             ),

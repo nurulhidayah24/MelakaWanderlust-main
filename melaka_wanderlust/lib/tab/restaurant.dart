@@ -223,7 +223,7 @@ class RestaurantTab extends StatelessWidget {
                                 Restaurant restaurant = restaurantList[index];
                                 // Determine whether the beach is a favorite or not
                                 bool isFavorite = value.isPlaceInWishlist(restaurant);
-                                return PlaceTile(place: restaurant, isFavorite: isFavorite);
+                                return PlaceTile(place: restaurant, isFavorite: isFavorite, );
                               },
                             ),
                           ),
